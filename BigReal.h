@@ -1,7 +1,9 @@
 #pragma once
 #include <iostream>
 #include <string>
+
 using namespace std;
+
 
 class BigReal {
 private:
@@ -22,5 +24,4 @@ public:
 	bool operator> (const BigReal& anotherReal);
 	bool operator== (const BigReal& anotherReal);
 	friend ostream& operator << (ostream& out, const BigReal& num);
-
 };
