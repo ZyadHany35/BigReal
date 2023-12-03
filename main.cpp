@@ -12,6 +12,7 @@ using namespace std;
 
 
 int main() {
+
     BigReal n1("1");
     BigReal n2("0.1");
     BigReal n3(n1);
