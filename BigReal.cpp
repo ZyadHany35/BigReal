@@ -4,6 +4,13 @@
 #include <string>
 using namespace std;
 
+bool BigReal:: isValidReal(const string& real){
+        if (regex_match(real, regex("[+-]?\\d*\\.?\\d*")))
+            return true;
+
+        else  return false;
+}
+
 BigReal BigReal::operator+ (const BigReal& other) {  
     string sumInt = "", sumFrac = "";
     BigReal first = *this;
@@ -150,3 +157,19 @@ BigReal BigReal::operator- (const BigReal& other) {
 
     return BigReal(sign, subInt, subFrac);
 }
+
+ostream& operator << (ostream& out, const BigReal& num){
+    if (num.sign == '+')
+    {
+        out << num.integer << '.' << num.fraction;
+    }
+    else
+    {
+        out << num.sign << num.integer << '.' << num.fraction;
+    }
+    return out;
+}
+
+
+
+
