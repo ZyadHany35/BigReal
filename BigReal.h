@@ -4,7 +4,6 @@
 
 using namespace std;
 
-
 class BigReal {
 private:
 	char sign = '+';
@@ -25,3 +24,4 @@ public:
 	bool operator== (const BigReal& anotherReal);
 	friend ostream& operator << (ostream& out, const BigReal& num);
 };
+
